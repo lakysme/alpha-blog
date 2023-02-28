@@ -1,0 +1,29 @@
+<h1>Articles listing page</h1>
+
+<% 
+#Criando uma tabela com HTML
+# Inicia com <tabel> </table>
+# <th></th> table head - colunas
+# <tr></tr> table row - linha
+# <td></td> table data -conteudo da celula 
+%>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
